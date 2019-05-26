@@ -1,0 +1,79 @@
+@import "materialize";
+
+$gradientTop: #051420;
+$gradientBottom: #362771;
+$navHeight: 64px;
+
+@mixin flex-column-center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin flex-row-center {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar-fixed {
+  nav {
+    background-color: $gradientTop;
+    box-shadow: none;
+    ul {
+      padding-right: 25px;
+      a {
+        padding: 0px 25px;
+      }
+    }
+
+    .brand-logo {
+      img {
+        height: 40px;
+        margin-top: calc((#{$navHeight} - 40px) / 2);
+      }
+      @media #{$large-and-up} {
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+.container-top {
+  background-image: linear-gradient($gradientTop, $gradientBottom);
+  height: 3000px;
+
+  .title-container {
+    @include flex-column-center();
+    height: calc(100vh - #{$navHeight});
+
+    .text-container {
+      @include flex-column-center();
+      margin-top: -150px;
+
+      .text-top {
+        @include flex-row-center();
+      }
+      h1 {
+        margin: 0px;
+      }
+
+      img {
+        height: 40px;
+        margin: 9px 5px 0px 16px;
+      }
+    }
+  }
+
+  .fish-container {
+    @include flex-column-center();
+    img {
+      margin-top: -150px;
+      width: 300px; // FIXME: Fix this
+      @media #{$large-and-up} {
+        width: 470px;
+      }
+    }
+  }
+}

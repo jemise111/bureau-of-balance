@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import DataFetch from "./components/DataFetch";
+import NavBar from "./components/NavBar";
+import Title from "./components/Title";
+import VoidFishes from "./components/VoidFishes";
+import "./scss/App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  componentDidMount() {}
+
+  render() {
+    return (
+      <div className="App">
+        <DataFetch />
+        <NavBar />
+        <div className="container-top">
+          <Title />
+          <VoidFishes />
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
