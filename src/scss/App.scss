@@ -21,20 +21,28 @@ $navHeight: 64px;
   nav {
     background-color: $gradientTop;
     box-shadow: none;
+
     ul {
       padding-right: 25px;
-      a {
-        padding: 0px 25px;
-      }
     }
 
     .brand-logo {
+      a {
+        padding: 0px 25px;
+      }
       img {
+        transition: all 0.2s ease-in-out;
+
+        display: block;
         height: 40px;
         margin-top: calc((#{$navHeight} - 40px) / 2);
       }
       @media #{$large-and-up} {
         margin-left: 50px;
+        img.hide-for-scroll {
+          opacity: 0;
+          margin-left: 15px;
+        }
       }
     }
   }
@@ -60,19 +68,37 @@ $navHeight: 64px;
       }
 
       img {
-        height: 40px;
-        margin: 9px 5px 0px 16px;
+        height: 30px;
+        margin: 16px 5px 0px 16px;
       }
     }
   }
 
   .fish-container {
     @include flex-column-center();
-    img {
+    margin: 0 auto;
+    position: relative;
+    width: 550px; // FIXME: Fix this on mobile
+    .mom {
       margin-top: -150px;
       width: 300px; // FIXME: Fix this
+      z-index: 2;
       @media #{$large-and-up} {
         width: 470px;
+      }
+    }
+    .baby {
+      transition: all 1s ease-in-out;
+      bottom: 0px;
+      position: absolute;
+      width: 200px;
+      z-index: 1;
+      right: 0px;
+      transform: rotate(20deg);
+
+      &.hide-for-scroll {
+        right: 175px;
+        transform: rotate(40deg);
       }
     }
   }

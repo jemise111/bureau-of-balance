@@ -2,7 +2,7 @@ import { Component } from "react";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
-export default class App extends Component {
+export default class DataFetch extends Component {
   componentDidMount() {
     // Your web app's Firebase configuration
     const firebaseConfig = {

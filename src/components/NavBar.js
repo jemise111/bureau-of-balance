@@ -1,14 +1,22 @@
 import React, { Component } from "react";
 import logo from "../images/logo.png";
 
-export default class App extends Component {
+export default class NavBar extends Component {
   render() {
     return (
       <div className="navbar-fixed">
         <nav>
           <div className="nav-wrapper">
-            <a href="#" className="brand-logo">
-              <img src={logo} />
+            <a href="nothing.html" className="brand-logo">
+              <img
+                alt=""
+                src={logo}
+                className={`${
+                  this.props.scrolledPastThresholdNavBar
+                    ? ""
+                    : "hide-for-scroll"
+                }`}
+              />
             </a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
