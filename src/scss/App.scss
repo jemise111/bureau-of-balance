@@ -1,7 +1,12 @@
 @import "materialize";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
+$ctaColor: #dd5d8b;
 $gradientTop: #051420;
 $gradientBottom: #362771;
+$cardBackground: #3b3494;
+$testimonialCardBackground: #1f1740;
 $navHeight: 64px;
 
 @mixin flex-column-center {
@@ -50,7 +55,7 @@ $navHeight: 64px;
 
 .container-top {
   background-image: linear-gradient($gradientTop, $gradientBottom);
-  height: 3000px;
+  height: 2500px;
 
   .title-container {
     @include flex-column-center();
@@ -100,6 +105,121 @@ $navHeight: 64px;
         right: 175px;
         transform: rotate(40deg);
       }
+    }
+  }
+
+  .team-container {
+    margin-top: 250px;
+    width: 90%;
+
+    .section-title {
+      margin-bottom: 120px;
+    }
+
+    .card-container {
+      @include flex-column-center();
+      height: 600px;
+    }
+
+    .bob-card {
+      @include flex-column-center();
+      transition: transform 0.3s ease-in-out;
+
+      background-color: $cardBackground;
+      box-shadow: 2px 15px 20px rgba(0, 0, 0, 0.5);
+      height: 550px;
+      justify-content: flex-start;
+      margin: 0px 15px;
+      transform: scale(0.75);
+
+      img {
+        height: 220px;
+        margin-top: 30px;
+      }
+
+      p {
+        margin: 0px;
+      }
+
+      .name {
+        align-self: flex-start;
+        margin: 10px 0px 0px 10px;
+      }
+
+      .title {
+        margin: 15px 0px;
+      }
+
+      .text {
+        margin: 0px 15px 15px 15px;
+      }
+    }
+
+    .slick-current {
+      .bob-card {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.container-bottom {
+  background-image: linear-gradient($gradientTop, $gradientBottom);
+  height: 2500px;
+
+  .section-title {
+    margin: 0px;
+    padding-top: 250px;
+  }
+
+  .testimonial-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .testimonial-card {
+        background-color: $testimonialCardBackground;
+        border-radius: 12px;
+        box-shadow: 2px 15px 20px rgba(0, 0, 0, 0.5);
+        margin: 25px;
+        width: 400px;
+
+        img {
+          margin: 15px 0px 0px 15px;
+          width: 33px;
+        }
+
+        .text {
+          margin: 0px;
+          padding: 15px 15px 15px 45px;
+        }
+
+        .author {
+          font-weight: bold;
+          margin: 0px;
+          padding: 15px 15px 20px 45px;
+        }
+      }
+    }
+  }
+
+  .testimonial-form-container {
+    form {
+      margin-top: 120px;
+    }
+
+    .materialize-textarea {
+      min-height: 12rem;
+    }
+
+    button {
+      width: 100%;
     }
   }
 }

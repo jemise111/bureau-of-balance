@@ -4,6 +4,8 @@ import NavBar from "./components/NavBar";
 import Title from "./components/Title";
 import VoidFishes from "./components/VoidFishes";
 import Team from "./components/Team";
+import Testimonials from "./components/Testimonials";
+import TestimonialForm from "./components/TestimonialForm";
 import "./scss/App.scss";
 
 export default class App extends Component {
@@ -58,6 +60,10 @@ export default class App extends Component {
             fishContainerRef={this.fishContainerRef}
           />
           <Team />
+        </div>
+        <div className="container-bottom">
+          <Testimonials />
+          <TestimonialForm />
         </div>
       </div>
     );
