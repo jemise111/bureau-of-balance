@@ -1,27 +1,36 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import avatar from "../images/lucretia.png";
-
-const Card = () => (
-  <div className="card-container white-text">
-    <div className="bob-card">
-      <p className="name">Lucretia</p>
-      <img src={avatar} alt="" />
-      <h4 className="title">Director</h4>
-      <p className="text center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum numquam
-        veniam cumque! Corporis porro laboriosam rem facilis nesciunt maxime.
-        Quidem voluptatem excepturi maiores eaque rem deleniti, animi totam
-        nesciunt inventore.
-      </p>
-      <a href="something.html" className="waves-effect waves-light btn">
-        Learn More
-      </a>
-    </div>
-  </div>
-);
+import { scramble } from "../utils/text";
+import ipre from "../images/ipre.png";
 
 export default class Team extends Component {
+  renderCard = data => {
+    const { id, name, title, imgUrl, text, isIpre, wikiUrl } = data;
+    return (
+      <div key={id} className="card-container white-text">
+        <div className="bob-card">
+          <p className="title">{title}</p>
+          {isIpre && <img className="ipre" src={ipre} alt="" />}
+          <img className="avatar" src={imgUrl} alt="" />
+          <h4 className="name">{name}</h4>
+          <p className="text center">
+            {this.props.scramble
+              ? scramble(text, this.props.onScramblePress)
+              : text}
+          </p>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={wikiUrl}
+            className="waves-effect waves-light btn"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    );
+  };
+
   render() {
     const settings = {
       centerMode: true,
@@ -48,17 +57,13 @@ export default class Team extends Component {
         }
       ]
     };
+
+    const data = this.props.data || [];
+
     return (
-      <section className="container team-container">
+      <section id="team" className="container team-container">
         <h3 className="section-title white-text center">Meet Our Team</h3>
-        <Slider {...settings}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </Slider>
+        <Slider {...settings}>{data.map(this.renderCard)}</Slider>
       </section>
     );
   }

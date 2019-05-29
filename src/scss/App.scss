@@ -22,6 +22,14 @@ $navHeight: 64px;
   justify-content: center;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+
+  .scramble {
+    font-family: "Libre Barcode 39", "Open Sans", sans-serif;
+  }
+}
+
 .navbar-fixed {
   nav {
     background-color: $gradientTop;
@@ -29,6 +37,14 @@ $navHeight: 64px;
 
     ul {
       padding-right: 25px;
+
+      li.highlight {
+        background-color: $ctaColor;
+      }
+
+      a {
+        text-decoration: none;
+      }
     }
 
     .brand-logo {
@@ -53,6 +69,12 @@ $navHeight: 64px;
   }
 }
 
+section {
+  h3 {
+    padding-top: 250px;
+  }
+}
+
 .container-top {
   background-image: linear-gradient($gradientTop, $gradientBottom);
   height: 2500px;
@@ -69,12 +91,13 @@ $navHeight: 64px;
         @include flex-row-center();
       }
       h1 {
+        font-family: "Open Sans Condensed", sans-serif;
         margin: 0px;
       }
 
       img {
         height: 30px;
-        margin: 16px 5px 0px 16px;
+        margin: 21px 5px 0px 16px;
       }
     }
   }
@@ -109,7 +132,6 @@ $navHeight: 64px;
   }
 
   .team-container {
-    margin-top: 250px;
     width: 90%;
 
     .section-title {
@@ -130,28 +152,39 @@ $navHeight: 64px;
       height: 550px;
       justify-content: flex-start;
       margin: 0px 15px;
+      position: relative;
       transform: scale(0.75);
 
-      img {
+      .avatar {
         height: 220px;
         margin-top: 30px;
+      }
+
+      .ipre {
+        height: 40px;
+        position: absolute;
+        top: 3px;
+        right: 5px;
       }
 
       p {
         margin: 0px;
       }
 
-      .name {
+      .title {
         align-self: flex-start;
         margin: 10px 0px 0px 10px;
       }
 
-      .title {
+      .name {
         margin: 15px 0px;
       }
 
       .text {
+        height: 135px;
         margin: 0px 15px 15px 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
 
@@ -165,51 +198,58 @@ $navHeight: 64px;
 
 .container-bottom {
   background-image: linear-gradient($gradientTop, $gradientBottom);
-  height: 2500px;
+  min-height: 2500px;
 
   .section-title {
     margin: 0px;
-    padding-top: 250px;
   }
 
-  .testimonial-card-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 100px;
-
-    .column {
+  .testimonials-container {
+    .testimonial-card-container {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 100px;
 
-      .testimonial-card {
-        background-color: $testimonialCardBackground;
-        border-radius: 12px;
-        box-shadow: 2px 15px 20px rgba(0, 0, 0, 0.5);
-        margin: 25px;
-        width: 400px;
+      .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
 
-        img {
-          margin: 15px 0px 0px 15px;
-          width: 33px;
-        }
+        .testimonial-card {
+          background-color: $testimonialCardBackground;
+          border-radius: 12px;
+          box-shadow: 2px 15px 20px rgba(0, 0, 0, 0.5);
+          margin: 25px;
+          width: 400px;
 
-        .text {
-          margin: 0px;
-          padding: 15px 15px 15px 45px;
-        }
+          img {
+            margin: 15px 0px 0px 15px;
+            width: 33px;
+          }
 
-        .author {
-          font-weight: bold;
-          margin: 0px;
-          padding: 15px 15px 20px 45px;
+          .text {
+            margin: 0px;
+            padding: 15px 15px 15px 45px;
+          }
+
+          .author {
+            font-weight: bold;
+            margin: 0px;
+            padding: 15px 15px 20px 45px;
+          }
         }
       }
+    }
+    button {
+      display: block;
+      margin: 50px auto 0px auto;
     }
   }
 
   .testimonial-form-container {
+    padding-bottom: 100px;
+
     form {
       margin-top: 120px;
     }
@@ -220,6 +260,45 @@ $navHeight: 64px;
 
     button {
       width: 100%;
+
+      &.success {
+        background-color: $success-color;
+      }
     }
+
+    .error-text {
+      color: $error-color;
+      height: 25px;
+    }
+  }
+}
+
+.container-credits {
+  background-image: linear-gradient($gradientTop, $gradientBottom);
+
+  .section-title {
+    margin: 0px;
+    padding-bottom: 105px;
+  }
+
+  p {
+    margin: 15px 0px 0px 0px;
+  }
+
+  .tag {
+    margin-top: 200px;
+    padding-bottom: 15px;
+  }
+
+  img {
+    vertical-align: middle;
+    width: 30px;
+  }
+}
+
+.modal {
+  img {
+    margin: 30px 0px 15px 0px;
+    width: 90px;
   }
 }

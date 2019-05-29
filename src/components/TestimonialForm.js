@@ -3,20 +3,37 @@ import React, { Component } from "react";
 export default class TestimonialForm extends Component {
   state = {
     name: "",
-    experience: ""
+    class: "",
+    experience: "",
+    errorText: ""
   };
 
-  handleNameChange = e => {
-    this.setState({ name: e.target.value });
-  };
-
-  handleExperienceChange = e => {
-    this.setState({ experience: e.target.value });
+  handleChange = key => e => {
+    this.setState({ errorText: "", [key]: e.target.value });
   };
 
   onSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    if (!this.state.name) {
+      this.setState({ errorText: "Name can't be blank" });
+      return;
+    }
+    if (!this.state.experience) {
+      this.setState({ errorText: "Testimonial can't be blank" });
+      return;
+    }
+    this.props.onSubmit(this.state);
+  };
+
+  flashSuccess = () => {
+    this.setState(
+      { success: true, name: "", experience: "", class: "" },
+      () => {
+        setTimeout(() => {
+          this.setState({ success: false });
+        }, 2000);
+      }
+    );
   };
 
   render() {
@@ -30,9 +47,22 @@ export default class TestimonialForm extends Component {
                 id="name"
                 type="text"
                 className="validate white-text"
-                onChange={this.handleNameChange}
+                onChange={this.handleChange("name")}
+                value={this.state.name}
               />
               <label htmlFor="name">Name</label>
+            </div>
+          </div>
+          <div className="row">
+            <div className="input-field">
+              <input
+                id="class"
+                type="text"
+                className="validate white-text"
+                onChange={this.handleChange("class")}
+                value={this.state.class}
+              />
+              <label htmlFor="class">Class</label>
             </div>
           </div>
           <div className="row">
@@ -41,18 +71,22 @@ export default class TestimonialForm extends Component {
                 id="experience"
                 className="materialize-textarea white-text"
                 maxLength="1000"
-                onChange={this.handleExperienceChange}
+                onChange={this.handleChange("experience")}
+                value={this.state.experience}
               />
               <label htmlFor="experience">How was your experience?</label>
             </div>
           </div>
+          <p className="error-text">{this.state.errorText}</p>
           <div className="row">
             <button
-              className="btn waves-effect waves-light"
+              className={`btn waves-effect waves-light ${
+                this.state.success ? "success" : ""
+              }`}
               type="submit"
               name="action"
             >
-              Submit
+              {this.state.success ? "SUCCESS!" : "SUBMIT"}
             </button>
           </div>
         </form>
