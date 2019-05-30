@@ -34,7 +34,7 @@ export default class Team extends Component {
   render() {
     const settings = {
       centerMode: true,
-      centerPadding: "60px",
+      centerPadding: "5px",
       slidesToShow: 3,
       responsive: [
         {
@@ -42,8 +42,8 @@ export default class Team extends Component {
           settings: {
             arrows: false,
             centerMode: true,
-            centerPadding: "40px",
-            slidesToShow: 3
+            centerPadding: "5px",
+            slidesToShow: 1
           }
         },
         {
@@ -51,7 +51,7 @@ export default class Team extends Component {
           settings: {
             arrows: false,
             centerMode: true,
-            centerPadding: "40px",
+            centerPadding: "5px",
             slidesToShow: 1
           }
         }

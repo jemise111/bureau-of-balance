@@ -114,8 +114,8 @@ export default class App extends Component {
       this.setState({ scrolledPastThresholdNavBar: true });
     }
 
-    // FIXME: Fix this 300 number
-    if (fishOffset < 300 && !this.state.scrolledPastThresholdFish) {
+    const threshold = window.innerHeight / 2;
+    if (fishOffset < threshold && !this.state.scrolledPastThresholdFish) {
       this.setState({ scrolledPastThresholdFish: true });
     }
   };

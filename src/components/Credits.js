@@ -8,10 +8,10 @@ export default class Credits extends Component {
         <h3 className="section-title center">Credits</h3>
         <p>
           Hail and Well Met travelers! This website wouldn’t be possible without
-          The Adventure Zone, created by Griffin, Justin, Travis, and Clint
-          McElroy, and the amazing TAZ fan art and other content that’s been
-          spread across the internet. This website is solely for fun and is in
-          no way affiliated with the show or books. I’ve done my best to give
+          The Adventure Zone podcast, created by Griffin, Justin, Travis, and
+          Clint McElroy, and the amazing TAZ fan art and other content that’s
+          been spread across the internet. This website is solely for fun and is
+          in no way affiliated with the show or books. I’ve done my best to give
           credit where it’s due but please reach out to me (
           <a href="mailto:jesse.sessler@gmail.com">jesse.sessler@gmail.com</a>)
           if you feel something has been misattributed, or you’d like your work
