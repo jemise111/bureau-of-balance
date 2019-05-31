@@ -99,6 +99,7 @@ section {
         .text-top-right-group {
           @include flex-row-center();
           align-items: baseline;
+          white-space: nowrap;
         }
 
         h1 {
