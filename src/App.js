@@ -11,6 +11,7 @@ import TestimonialForm from "./components/TestimonialForm";
 import Credits from "./components/Credits";
 import InoculateModal from "./components/InoculateModal";
 import { initSmoothScroll } from "./utils/init";
+import { shuffle } from "./utils/array";
 import "./scss/App.scss";
 
 export default class App extends Component {
@@ -52,7 +53,7 @@ export default class App extends Component {
       .collection("employees")
       .get()
       .then(snapshot => {
-        const employees = snapshot.docs.map(doc => doc.data());
+        const employees = shuffle(snapshot.docs.map(doc => doc.data()));
         this.setState({ employees });
       });
   }

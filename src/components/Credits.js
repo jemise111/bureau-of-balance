@@ -119,7 +119,7 @@ export default () => (
     </p>
 
     <p>
-      Barry by Wilkoak
+      Barry by Foxaes
       <br />
       <em>
         <a href="https://theadventurezone.fandom.com/wiki/Barry_Bluejeans?file=Barry_by_Foxaes.png">
@@ -129,11 +129,21 @@ export default () => (
     </p>
 
     <p>
-      Killiean by Weaselbusiness
+      Killian by Weaselbusiness
       <br />
       <em>
         <a href="https://weaselbusiness.tumblr.com/post/151483875058/so-like-whens-the-killin-it-with-killian-spin">
           https://weaselbusiness.tumblr.com/post/151483875058/so-like-whens-the-killin-it-with-killian-spin
+        </a>
+      </em>
+    </p>
+
+    <p>
+      Carey by Becpng
+      <br />
+      <em>
+        <a href="https://becpng.tumblr.com/post/163765201264/how-had-i-never-drawn-carey-before-i-love-her">
+          https://becpng.tumblr.com/post/163765201264/how-had-i-never-drawn-carey-before-i-love-her
         </a>
       </em>
     </p>
@@ -144,6 +154,46 @@ export default () => (
       <em>
         <a href="https://larndraws.tumblr.com/post/156512452543/i-love-this-good-detective-boy">
           https://larndraws.tumblr.com/post/156512452543/i-love-this-good-detective-boy
+        </a>
+      </em>
+    </p>
+
+    <p>
+      Lucas by Queenoftheantz
+      <br />
+      <em>
+        <a href="https://queenoftheantz.tumblr.com/post/164002823609/i-made-a-taz-lineup-of-course-im-missing-some">
+          https://queenoftheantz.tumblr.com/post/164002823609/i-made-a-taz-lineup-of-course-im-missing-some
+        </a>
+      </em>
+    </p>
+
+    <p>
+      Avi by Spacecadetmaya
+      <br />
+      <em>
+        <a href="https://ango-mcdonald.tumblr.com/post/157590685726/space-cadet-maya-super-quick-avi-warm-up">
+          https://ango-mcdonald.tumblr.com/post/157590685726/space-cadet-maya-super-quick-avi-warm-up
+        </a>
+      </em>
+    </p>
+
+    <p>
+      Leon by Joltzen-art
+      <br />
+      <em>
+        <a href="https://joltzen-art.tumblr.com/post/166211499266/meet-the-bob">
+          https://joltzen-art.tumblr.com/post/166211499266/meet-the-bob
+        </a>
+      </em>
+    </p>
+
+    <p>
+      No-3113 by Swoletergeist
+      <br />
+      <em>
+        <a href="https://swoletergeist.tumblr.com/post/155870417262/not-sure-im-gonna-finish-drawing-the-rest-of-the">
+          https://swoletergeist.tumblr.com/post/155870417262/not-sure-im-gonna-finish-drawing-the-rest-of-the
         </a>
       </em>
     </p>
