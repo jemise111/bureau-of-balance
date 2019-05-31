@@ -6,6 +6,7 @@ $ctaColor: #dd5d8b;
 $gradientTop: #051420;
 $gradientBottom: #362771;
 $cardBackground: #3b3494;
+$serviceColor: #b0aafa;
 $testimonialCardBackground: #1f1740;
 $navHeight: 64px;
 
@@ -79,11 +80,8 @@ section {
 
 .container-top {
   background-image: linear-gradient($gradientTop, $gradientBottom);
-  height: 2200px;
-
-  @media #{$large-and-up} {
-    height: 2500px;
-  }
+  min-height: 2200px;
+  padding-bottom: 150px;
 
   .title-container {
     @include flex-column-center();
@@ -173,6 +171,43 @@ section {
         &.hide-for-scroll {
           right: 175px;
           transform: rotate(40deg);
+        }
+      }
+    }
+  }
+
+  .services-container {
+    width: 90%;
+
+    .units-container {
+      @include flex-row-center();
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 100px;
+
+      .unit {
+        @include flex-column-center();
+        margin: 20px 0px;
+        text-align: center;
+        width: 300px;
+
+        .image-container {
+          @include flex-column-center();
+          border: 1px solid $serviceColor;
+          border-radius: 100px;
+          height: 200px;
+          width: 200px;
+        }
+        img {
+          &.Seek {
+            height: 120px;
+          }
+          &.Regulate {
+            height: 100px;
+          }
+          &.Reclaim {
+            height: 100px;
+          }
         }
       }
     }

@@ -37,6 +37,11 @@ export default class NavBar extends Component {
             </a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
+                <a className="scroller" data-scroll href="#services">
+                  SERVICES
+                </a>
+              </li>
+              <li>
                 <a className="scroller" data-scroll href="#team">
                   TEAM
                 </a>

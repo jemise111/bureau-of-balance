@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Title from "./components/Title";
 import VoidFishes from "./components/VoidFishes";
 import Team from "./components/Team";
+import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import TestimonialForm from "./components/TestimonialForm";
 import Credits from "./components/Credits";
@@ -140,6 +141,10 @@ export default class App extends Component {
           <VoidFishes
             scrolledPastThresholdFish={this.state.scrolledPastThresholdFish}
             fishContainerRef={this.fishContainerRef}
+          />
+          <Services
+            scramble={!this.state.inoculated}
+            onScramblePress={this.onScramblePress}
           />
           <Team
             data={this.state.employees}
